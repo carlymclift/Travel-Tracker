@@ -2,9 +2,10 @@ class User {
   constructor(userData) {
     this.id = userData.id;
     this.name = userData.name;
-    this.userName = 'traveler' + userData.id;
+    this.userName = 'traveler' + this.id || 'agency';
     this.password = 'travel2020';
   }
+
   logIn(userName, password) {
     if ((userName === this.userName) && (password === this.password)) {
       return `Hello ${this.name}!`
