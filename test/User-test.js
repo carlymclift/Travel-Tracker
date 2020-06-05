@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { expect } from 'chai';
 import User from '../src/User.js';
 import travelers from '../data/travelers-test-data.js'
@@ -17,7 +18,7 @@ describe('User', () => {
     expect(user).to.be.an.instanceOf(User);
   })
 
-  it('Should have a id and a name for the user', () => {
+  it('Should have an id and a name for the user', () => {
     expect(user.id).to.eql(7);
     expect(user.name).to.eql('Emmet Sandham');
   })
