@@ -1,6 +1,18 @@
 class User {
-  constructor(user) {
-    this.id = user.id
+  constructor(userData) {
+    this.id = userData.id;
+    this.name = userData.name;
+    this.userName = 'traveler' + userData.id;
+    this.password = 'travel2020';
+  }
+  logIn(userName, password) {
+    if ((userName === this.userName) && (password === this.password)) {
+      return `Hello ${this.name}!`
+    } else if ((userName === 'agency') && (password === this.password)) {
+      return 'Welcome Travel Agent!'
+    } else {
+      return 'The username or password is inncorrect'
+    }
   }
 }
 
